@@ -1,0 +1,32 @@
+{
+  "name": "ethioshare-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "16.x"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "bcrypt": "^5.0.1",
+    "cloudinary": "^1.28.1",
+    "cors": "^2.8.5",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "express-graphql": "^0.12.0",
+    "googleapis": "^100.0.0",
+    "graphql": "^15.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.7",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.7.5",
+    "qrcode": "^1.5.0",
+    "speakeasy": "^2.0.0",
+    "validator": "^13.7.0"
+  }
+}

@@ -1,0 +1,110 @@
+POST http://localhost:8000/users/create
+Content-Type: application/json
+
+{
+    "email": "tsega207@mai.om",
+    "password": "Msiisgood123",
+    "username": "tegaaaa",
+    "firstName": "Tsega",
+    "lastName": "Amanuel"
+}
+
+###
+POST http://localhost:8000/users/login
+Content-Type: application/json
+
+{
+    "email": "tsega207@gmail.com",
+    "password": "Msiisgood123"
+}
+
+###
+POST http://localhost:8000/users/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjBmZDkwNDA4MWU0YWVjYmU3MDZmNmMiLCJpYXQiOjE2NDUyOTY0MDksImV4cCI6MTY0NTM4MjgwOX0.FcWJAKQv57XcvqZcwQd2LM27BEzx5PTbr00TVvOKiYA"
+}
+
+###
+POST http://localhost:8000/users/getUser
+Content-Type: application/json
+
+{
+    "userId": "622da82aeee04c71764e2a5b"
+}
+
+
+###
+GET http://localhost:8000/companies/wd
+
+{
+    "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjJmNDVkZTFjZTJhZWE0ZGU0NTk5MTgiLCJpYXQiOjE2NTE0OTczMzUsImV4cCI6MTY1MTQ5NzYzNX0.kOyl4QMLgkFbgjEHCcrCX9e502oDWbiHNGL5kD0Nxag"
+}
+
+###
+POST http://localhost:8000/companies/getCompany
+Content-Type: application/json
+
+{
+    "companyId": "622e309b12280fe13681d1bf"
+}
+
+###
+POST http://localhost:8000/buyerRequests/add
+Content-Type: application/json
+
+{
+    "companyId": "61eaebb3543c24e7d7968de4",
+    "userId": "622de55828de4689ddddd2e8",
+    "companyPremium": 300
+}
+
+###
+GET http://localhost:8000/buyerRequests/getAllBuyerRequests
+
+###
+POST http://localhost:8000/buyerRequests/getBuyerRequest
+Content-Type: application/json
+
+{
+    "companyName": "dashen"
+}
+
+###
+GET http://localhost:8000/users/tests
+
+###
+POST http://localhost:8000/users/forget-password
+Content-Type: application/json
+
+{
+    "email": "tsega207@gmail.com"
+}
+
+###
+GET http://localhost:8000/2fa
+
+###
+POST http://localhost:8000/2fa
+Content-Type: application/json
+
+{
+    "token": 089359
+}
+
+###
+POST http://localhost:8000/2fa/verify
+Content-Type: application/json
+
+{
+    "token": "200741"
+}
+
+###
+POST http://localhost:8000/companies/getCompanyByName
+Content-Type: application/json
+
+{
+    "companyName": "zemen bank"
+}
