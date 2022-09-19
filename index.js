@@ -7,7 +7,6 @@ require("dotenv").config()
 const app = express()
 const PORT = process.env.PORT || 8000
 
-
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true
@@ -30,12 +29,17 @@ app.use(cors({
 }))
 
 // app.use(cors())
-
 const uri = process.env.ATLAS_URI
-mongoose.connect(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+async function connectToDB() {
+    try {
+        mongoose.connect(uri)
+        console.log("Connected to MongoDB")
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+connectToDB()
 
 const connection = mongoose.connection
 connection.once('open', () => {
@@ -56,6 +60,7 @@ app.use("/buyerRequests", buyerRequestsRouter)
 
 app.use(authCheck)
 const graphqlRouter = require("./routes/graphql")
+const { urlencoded } = require("express")
 app.use("/graphql", graphqlRouter)
 
 app.use("/", (req, res) => {
