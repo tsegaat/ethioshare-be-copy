@@ -58,6 +58,9 @@ app.use(authCheck)
 const graphqlRouter = require("./routes/graphql")
 app.use("/graphql", graphqlRouter)
 
+app.use("/", (req, res) => {
+    res.send("This is the body")
+})
 app.listen(PORT, () => {
     console.log(`The server is running on port ${PORT}`)
 })
